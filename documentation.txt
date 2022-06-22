@@ -1,5 +1,5 @@
 June 7, 2022 - Day 1
-Initial commmit.
+Initial commit.
 Goal: Finish the UI today.
 Result: Far from finished.
 Time: 4.62 hours
@@ -32,14 +32,48 @@ If I work on a local environment, it will be difficult to do the file handling, 
 When data is already loaded, I need to organize it properly to appear on the screen. Alright.
 Result:
 I learned some quirks in localStorage. Seems like it works best for Firefox. I also was able to create a sample create function. I still need refinement.
+Time: 6.28 hours
 
 June 14, 2022
 Goal:
 Need to fetch and create post.
 Result:
 The script can now fetch data. Now, I need a way to read comments and show them on screen.
+Time: 3.03 hours
 
 June 15, 2022
 Result: I can already read the comments and show them on screen. Up next, I am gonna fix the structure of the comment content, form, and replies. I already figured it out on my notebook. Let's go!
+Time: 3.08 hours
 
-June 17, 2022 - NEED TO FINISH THIS.
+June 16, 2022
+I figured out that I need to restructure the data. It's just difficult to locate the parents of the parents of a nested reply through the current format. I added a property called parentId in each comment (or post), to easily map the parent.
+Reading and creating new posts are already done!
+
+Updating is also done! Need to clean up my code. Kinda messy. Still deciding if I will do the "read" separately from "update". "Read" means showing it on the HTML.
+Time: 8.22 hours
+
+June 17, 2022 - NEED TO FINISH THIS. 
+The resturcturing of the data gave some difficulties for the deleting function. Basically, it can be difficult to delete child comments. Need to add that property.
+
+I was thinking, what's wrong with the original structure? I looked back, and found that the difficulty is in the updating of the the data. It's difficult to traverse toward a post id, when I have to go through all its ancestors.
+
+Further thinking gave me a good answer that my decision was right. I have a fix for the delete function! Result: Works nice.
+
+Need more commenting on my code, to give more understanding.
+
+Scoring is also working. Pretty much done. Just need a mechanism to change users.
+Time: 4.55 hours
+
+June 19, 2022
+Changing users is also done.
+Time: 1.32 hours
+
+June 20, 2022
+Hover works bad on mobile. It gets stuck in hover state. I researched and experimented, and I was able to create a touch ripple effect for the button. I scrapped it, though, because it seems too much. I need to check better alternatives.
+Time: 2 hours
+
+June 20, 2022
+The goal is to cap the votes based on user credentials. Next time.
+
+June 22, 2022
+I need to think about width devices less than 320px, like the Galaxy Fold. How can I use wrapping in flex and grid to make the layout conform to that super small width?
