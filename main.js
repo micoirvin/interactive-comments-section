@@ -72,10 +72,15 @@ const createPostForm = function(id, type = `reply`) {
       btnContent = `REPLY`;
    }
 
+   let textarea = document.createElement(`textarea`);
+   textarea.setAttribute(`placeholder`, placeholder);
+   
    form.innerHTML =  
    `<a href="#" class="avtr"><img src="${data["users"][data["currentUser"]]["image"]["png"]}"></a>
-   <textarea name="" id="" placeholder="${placeholder}" ></textarea>
    <button type="submit" name="send-reply" class="big-btn" onclick="createPost(this)">${btnContent}</button>`;
+   
+   form.appendChild(textarea);
+   if(type === `reply`) textarea.focus();
 }
 
 const readPost = function(id) {
@@ -132,7 +137,7 @@ const readPost = function(id) {
       smallBtns = 
       `<button class="small-btn del" type="button" onclick="trigDelModal('${id}')"><i class="fa-solid fa-trash"></i>Delete</button>
       <button class="small-btn edit" type="button" onclick="createEditForm('${id}')"><i class="fa-solid fa-pen"></i>Edit</button>
-      <button type="submit" class="small-btn cncl">Cancel</button>
+      <button type="submit" class="small-btn cncl" onclick="closeEditForm()">Cancel</button>
       <button type="submit" class="big-btn" onclick="updatePost('${id}')">UPDATE</button>
       <textarea></textarea>`;
    }

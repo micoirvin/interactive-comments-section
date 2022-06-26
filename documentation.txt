@@ -77,3 +77,15 @@ The goal is to cap the votes based on user credentials. Next time.
 
 June 22, 2022
 I need to think about width devices less than 320px, like the Galaxy Fold. How can I use wrapping in flex and grid to make the layout conform to that super small width?
+
+June 24, 2022
+UI - I think the extra space on the bottom of the card is due to the hidden edit buttons.
+Suggestions from the community:
+Icons (reply, edit, and delete) are not aligned vertically with text
+You don't get the @username tag when replying to someone
+Likes should be limited to one only per comment
+Cancel button when editing won't work
+UX suggestion: autofocus input when clicking Reply
+UI suggestion: some animation when posting would be nice to the eyes
+Feature suggestion: autolike your own comment when posting
+if you start nesting replies, you end up getting most of the text cut off by the 3rd or 4th reply. I'd recommend just adding in some logic to keep the comment card from getting too small. 
