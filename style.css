@@ -34,10 +34,6 @@ body {
     padding-bottom: 300px;
 }
 
-body * {
-    border: 0.1px solid transparent;
-}
-
 main.post-box {
     margin: 0 auto;
     padding: 0 16px;
