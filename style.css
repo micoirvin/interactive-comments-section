@@ -48,7 +48,6 @@ main.post-box {
 
 .comments {
     order: 2;
-    margin-bottom: 16px;
     display: flex;
     flex-direction: column;
     gap: 16px;
